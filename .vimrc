@@ -40,6 +40,10 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+map tn gt
+map tp gT
+nmap tt :tabs<CR>
+
 " Open nerdtree
 map <leader>e :NERDTreeToggle<CR>
 
