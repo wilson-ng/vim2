@@ -22,7 +22,9 @@ set expandtab
 
 execute pathogen#infect()
 
-colorscheme wombat256mod
+let g:solarized_use16=1
+set background=dark
+colorscheme solarized8
 
 " Fast saving <leader>w
 nmap <leader>w :w!<cr>
@@ -58,7 +60,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " set Lightline
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'solarized',
       \ }
 
 " Copy/Paste
@@ -66,6 +68,9 @@ if has('macunix')
   " pbcopy for OSX copy/paste
   vmap <C-x> :!pbcopy<CR>
   vmap <C-c> :w !pbcopy<CR><CR>
+else 
+  map <C-p> "+p
+  vnoremap <C-c> "+y
 endif
 
 " Syntastic
