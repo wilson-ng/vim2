@@ -9,7 +9,9 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path '**/cache/**' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 nnoremap <silent> <leader>t :FZF -m<CR>
 
-set clipboard=unnamedplus
+if !has('macunix') 
+  set clipboard=unnamedplus
+endif
 
 " Show Line Number
 set number
@@ -22,9 +24,9 @@ set expandtab
 
 execute pathogen#infect()
 
-let g:solarized_use16=1
+syntax enable
 set background=dark
-colorscheme solarized8
+colorscheme monokai
 
 " Fast saving <leader>w
 nmap <leader>w :w!<cr>

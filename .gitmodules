@@ -82,3 +82,6 @@
 [submodule "bundle/vim-solarized8"]
 	path = bundle/vim-solarized8
 	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule "bundle/vim-monokai"]
+	path = bundle/vim-monokai
+	url = https://github.com/sickill/vim-monokai.git
