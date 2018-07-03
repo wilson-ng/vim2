@@ -4,6 +4,7 @@ set rtp+=/usr/local/opt/fzf
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path '**/cache/**' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
+let mapleader=","
 nnoremap <silent> <leader>t :FZF -m<CR>
 
 if !has('macunix') 
@@ -12,6 +13,9 @@ endif
 
 " Show Line Number
 set number
+set title
+set visualbell
+set noerrorbells
 
 " Set Tabstop / width = 4
 set tabstop=4
@@ -23,7 +27,7 @@ execute pathogen#infect()
 
 syntax enable
 set background=dark
-colorscheme monokai
+colorscheme wombat256mod
 
 " Fast saving <leader>w
 nmap <leader>w :w!<cr>
@@ -59,8 +63,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " set Lightline
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ }
+    \ 'colorscheme': 'wombat',
+    \ }
+
+let g:NERDSpaceDelims = 1
+let g:NERDTrimTrailingWhitespace = 1
 
 " Copy/Paste
 if has('macunix')
@@ -94,4 +101,4 @@ set smartcase
 set nobackup
 set noswapfile
 
-
+filetype plugin indent on
