@@ -14,8 +14,9 @@ endif
 " Show Line Number
 set number
 set title
-set visualbell
 set noerrorbells
+set visualbell t_vb=    " turn off error beep/flash
+set novisualbell        " turn off visual bell
 
 " Set Tabstop / width = 4
 set tabstop=4
@@ -27,7 +28,8 @@ execute pathogen#infect()
 
 syntax enable
 set background=dark
-colorscheme wombat256mod
+colorscheme wombat256i
+" let g:solarized_termcolors=256
 
 " Fast saving <leader>w
 nmap <leader>w :w!<cr>
@@ -61,6 +63,9 @@ nmap <leader>b :TagbarToggle<CR>
 " Close vim if only window left open is nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
+
 " set Lightline
 let g:lightline = {
     \ 'colorscheme': 'wombat',
@@ -86,16 +91,23 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
 
 " searching
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+set ruler                                                                       "shows line number and column"
+set rulerformat=%l\:%c                                                          "better ruler format"
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l\:%c%V%)
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=59 guibg=lightgrey
 
 "" Directories for swp files
 set nobackup

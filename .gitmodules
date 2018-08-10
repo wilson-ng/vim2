@@ -79,9 +79,6 @@
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "bundle/vim-solarized8"]
-	path = bundle/vim-solarized8
-	url = https://github.com/lifepillar/vim-solarized8.git
 [submodule "bundle/vim-monokai"]
 	path = bundle/vim-monokai
 	url = https://github.com/sickill/vim-monokai.git
@@ -97,3 +94,24 @@
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-wombat256i"]
+	path = bundle/vim-wombat256i
+	url = https://github.com/dsolstad/vim-wombat256i
+[submodule "bundle/SQLUtilities"]
+	path = bundle/SQLUtilities
+	url = git@github.com:vim-scripts/SQLUtilities.git
+[submodule "bundle/Align"]
+	path = bundle/Align
+	url = git@github.com:vim-scripts/Align.git
+[submodule "bundle/vim-jdaddy"]
+	path = bundle/vim-jdaddy
+	url = git@github.com:tpope/vim-jdaddy.git
+[submodule "bundle/vim-windowswap"]
+	path = bundle/vim-windowswap
+	url = git@github.com:wesQ3/vim-windowswap.git
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
